@@ -34,6 +34,11 @@ module.exports = {
 				test: /\.svg$/,
 				loader: 'vue-svg-loader', // `vue-svg` for webpack 1.x
 			},
+			{
+				test: /\.(graphql|gql)$/,
+				exclude: /node_modules/,
+				loader: 'graphql-tag/loader'
+			}
 		],
 		plugins: [
 			// make sure to include the plugin for the magic
